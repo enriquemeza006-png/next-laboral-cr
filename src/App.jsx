@@ -188,27 +188,34 @@ function App() {
             planilla, nómina o asesoría laboral.
           </p>
 
-          <form className="grid gap-5 bg-white p-8 rounded-3xl shadow-2xl">
+          <form
+  action="https://formsubmit.co/nextlaboralcr@nextlaboralcr.com"
+  method="POST"
+  className="grid gap-5 bg-white p-8 rounded-3xl shadow-2xl"
+>
             <input
-              type="text"
-              placeholder="Nombre completo"
-              className="p-4 rounded-xl bg-slate-100 text-slate-900 outline-none focus:ring-2 focus:ring-blue-600"
-            />
+  type="text"
+  name="nombre"
+  placeholder="Nombre completo"
+  className="p-4 rounded-xl bg-slate-100 text-slate-900 outline-none focus:ring-2 focus:ring-blue-600"
+/>
 
-            <input
-              type="email"
-              placeholder="Correo electrónico"
-              className="p-4 rounded-xl bg-slate-100 text-slate-900 outline-none focus:ring-2 focus:ring-blue-600"
-            />
+<input
+  type="email"
+  name="correo"
+  placeholder="Correo electrónico"
+  className="p-4 rounded-xl bg-slate-100 text-slate-900 outline-none focus:ring-2 focus:ring-blue-600"
+/>
 
-            <textarea
-              placeholder="Mensaje"
-              rows="5"
-              className="p-4 rounded-xl bg-slate-100 text-slate-900 outline-none focus:ring-2 focus:ring-blue-600"
-            ></textarea>
+<textarea
+  name="mensaje"
+  placeholder="Mensaje"
+  rows="5"
+  className="p-4 rounded-xl bg-slate-100 text-slate-900 outline-none focus:ring-2 focus:ring-blue-600"
+></textarea>
 
             <button
-              type="button"
+              type="submit"
               className="bg-blue-900 text-white px-6 py-4 rounded-xl font-black hover:bg-blue-700 transition"
             >
               Enviar mensaje
