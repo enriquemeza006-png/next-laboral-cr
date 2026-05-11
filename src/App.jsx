@@ -196,7 +196,7 @@ function App() {
   <input
     type="hidden"
     name="_next"
-    value="https://next-laboral-cr.vercel.app/#contacto"
+    value="https://next-laboral-cr.vercel.app"
   />
 
   <input
