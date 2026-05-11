@@ -71,20 +71,27 @@ function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
 
-      {/* NAVBAR */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
-        <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-3xl font-black text-blue-900">
-            Next <span className="text-blue-600">Laboral CR</span>
-          </h1>
+{/* NAVBAR */}
+<header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200">
+  <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+    <h1 className="text-2xl sm:text-3xl font-black text-blue-900">
+      Next <span className="text-blue-600">Laboral CR</span>
+    </h1>
 
-          <div className="hidden md:flex gap-8 font-semibold text-slate-700">
-            <a className="hover:text-blue-700" href="#inicio">Inicio</a>
-            <a className="hover:text-blue-700" href="#servicios">Servicios</a>
-            <a className="hover:text-blue-700" href="#contacto">Contacto</a>
-          </div>
-        </nav>
-      </header>
+    <div className="hidden md:flex gap-8 font-semibold text-slate-700">
+      <a className="hover:text-blue-700" href="#inicio">Inicio</a>
+      <a className="hover:text-blue-700" href="#servicios">Servicios</a>
+      <a className="hover:text-blue-700" href="#contacto">Contacto</a>
+    </div>
+
+    <a
+      href="#contacto"
+      className="md:hidden bg-blue-900 text-white px-4 py-2 rounded-xl text-sm font-bold"
+    >
+      Contacto
+    </a>
+  </nav>
+</header>
 
       {/* HERO */}
       <section
@@ -93,7 +100,7 @@ function App() {
       >
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_white,_transparent_35%)]"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-12 items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20 md:py-28 grid md:grid-cols-2 gap-10 md:gap-12 items-center">
           <motion.div
   initial={{ opacity: 0, y: 40 }}
   animate={{ opacity: 1, y: 0 }}
@@ -103,7 +110,7 @@ function App() {
     Plataforma de Recursos Humanos
   </p>
 
-            <h2 className="text-5xl md:text-6xl font-black leading-tight mb-6">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight mb-6">
               Conectamos talento con oportunidades
             </h2>
 
@@ -122,12 +129,12 @@ function App() {
           </div>
 </motion.div>
           {/* LOGO / SIGLAS */}
-<div className="bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl flex items-center justify-center">
-  <div className="bg-white rounded-3xl p-8 w-full flex items-center justify-center">
+<div className="bg-white/10 border border-white/20 rounded-3xl p-4 sm:p-8 shadow-2xl flex items-center justify-center">
+  <div className="bg-white rounded-3xl p-4 sm:p-8 w-full flex items-center justify-center">
     <img
   src="/logo.png"
   alt="Logo Next Laboral CR"
-  className="w-full max-w-md object-contain"
+  className="w-full max-w-xs sm:max-w-md object-contain"
 />
   </div>
 </div>
