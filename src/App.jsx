@@ -194,13 +194,30 @@ function App() {
   className="grid gap-5 bg-white p-8 rounded-3xl shadow-2xl"
 >
   <input
+    type="hidden"
+    name="_next"
+    value="https://next-laboral-cr.vercel.app/#contacto"
+  />
+
+  <input
+    type="hidden"
+    name="_subject"
+    value="Nuevo mensaje desde Next Laboral CR"
+  />
+
+  <input
+    type="hidden"
+    name="_captcha"
+    value="false"
+  />
+
+  <input
     type="text"
     name="nombre"
     placeholder="Nombre completo"
     required
     className="p-4 rounded-xl bg-slate-100 text-slate-900 outline-none focus:ring-2 focus:ring-blue-600"
   />
-
   <input
     type="email"
     name="correo"
