@@ -1,3 +1,5 @@
+import { motion } from "framer-motion"
+
 function App() {
   const servicios = [
     {
@@ -92,10 +94,14 @@ function App() {
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_white,_transparent_35%)]"></div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="inline-block bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-              Plataforma de Recursos Humanos
-            </p>
+          <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <p className="inline-block bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+    Plataforma de Recursos Humanos
+  </p>
 
             <h2 className="text-5xl md:text-6xl font-black leading-tight mb-6">
               Conectamos talento con oportunidades
@@ -114,7 +120,7 @@ function App() {
               </a>
             </div>
           </div>
-
+</motion.div>
           {/* LOGO / SIGLAS */}
 <div className="bg-white/10 border border-white/20 rounded-3xl p-8 shadow-2xl flex items-center justify-center">
   <div className="bg-white rounded-3xl p-8 w-full flex items-center justify-center">
@@ -146,8 +152,13 @@ function App() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicios.map((servicio, index) => (
-              <div
-                key={index}
+              <motion.div
+  key={index}
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: index * 0.1 }}
+  viewport={{ once: true }}
+                
                 className="bg-slate-50 p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition"
               >
                 <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl mb-5">
@@ -166,7 +177,7 @@ function App() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
